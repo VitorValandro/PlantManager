@@ -17,6 +17,7 @@ import { Header } from '../components/Header';
 import { loadPlant, PlantProps } from '../libs/storage';
 import fonts from '../styles/fonts';
 import { PlantCardSecondary } from '../components/PlantCardSecondary';
+import { Load } from '../components/Load';
 
 
 export function MyPlants(){
@@ -41,6 +42,12 @@ export function MyPlants(){
       setLoading(false);
     }
   }, []);
+
+  if (loading) {
+    return (
+      <Load />
+    )
+  }
 
   return(
     <View style={styles.container}>

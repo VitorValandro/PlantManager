@@ -6,6 +6,7 @@ export interface PlantProps{
   name: string,
   about: string,
   water_tips: string,
+  hour: string,
   photo: string,
   environments: [string],
   frequency: {
@@ -15,7 +16,7 @@ export interface PlantProps{
   dateTimeNotification: Date
 }
 
-interface StoragePlantProps{
+export interface StoragePlantProps{
   [id: string]: {
     data: PlantProps;
   }
